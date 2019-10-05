@@ -11,7 +11,7 @@ export const FeatureComponent = {
     let featureComponentViewHTML = '<section class="main-container">';
 
     // featureComponentViewHTML += FeatureXYZComponent.render(FeatureModel);
-    featureComponentViewHTML += 'You are all set.'
+    featureComponentViewHTML += 'You are all set.';
     featureComponentViewHTML += '</section>';
 
     this.appElement.innerHTML = featureComponentViewHTML;
