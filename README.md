@@ -24,8 +24,8 @@ Built-in support for the following tools:
 * [Webpack](https://webpack.js.org/) - Bundle your assets
 * [Sass](https://sass-lang.com/) - CSS with superpowers
 * [Jest](https://jestjs.io/) - Delightful JavaScript Testing
-* [Prettier](https://prettier.io/) - An opinionated Code formatter, automatocally configured to run before every commit via [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged).
-* [Eslint](https://eslint.org) - The pluggable linting utility for JavaScript, automatocally configured to run before every push via [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged).
+* [Prettier](https://prettier.io/) - An opinionated Code formatter, automatcally configured to run before every commit via [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged).
+* [ESlint](https://eslint.org) - The pluggable linting utility for JavaScript, automatically configured to run before every push via [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged).
 
 ### Authors
 
