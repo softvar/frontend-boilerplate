@@ -3,18 +3,11 @@
 * It helps you to kickstart new projects, prescribing best practices and tools to help you stay productive.
 * Start your development with all latest technologies without configuring and thinking much.
 * Easy for testing out things and at the same time scalable enough to build real stuff.
+* Dev and production-ready build support.
 
 ### Installation
 
-* Clone this repo.(*Package coming soon*)
-* Use the following command to install and setup your dev environment
-  ```bash
-    yarn start
-  ```
-* Use the following command to start dev server and your application would be waiting for you in the browser.
-  ```bash
-    yarn dev:server
-  ```
+* Clone this repo(*Package coming soon*)
 
 ### Features
 
@@ -26,6 +19,29 @@ Built-in support for the following tools:
 * [Jest](https://jestjs.io/) - Delightful JavaScript Testing
 * [Prettier](https://prettier.io/) - An opinionated Code formatter, automatically configured to run before every commit via [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged).
 * [ESlint](https://eslint.org) - The pluggable linting utility for JavaScript, automatically configured to run before every push via [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged).
+
+### scripts
+
+* Use the following command to install the dependencies
+  ```bash
+    yarn
+  ```
+* Use the following command to setup your dev environment
+  ```bash
+    yarn start
+  ```
+* Use the following command to start dev server and your application would be waiting for you in the browser.
+  ```bash
+    yarn dev:server
+  ```
+* Use the following command to have dev build
+  ```bash
+    yarn dev
+  ```
+* Use the following command to production ready build
+  ```bash
+    yarn build
+  ```
 
 ### Authors
 

@@ -8,7 +8,7 @@ const { libraryName, libVersion, license } = packageFile;
 const libraryHeaderComment = `${libraryName} - v${libVersion}\n
 ${license} License`;
 
-const plugins = [
+const plugins = argv => [
   new webpack.BannerPlugin({
     banner: libraryHeaderComment,
     entryOnly: true
@@ -17,22 +17,22 @@ const plugins = [
     inject: false,
     hash: true,
     template: './index.html',
-    filename: 'index.html'
+    filename: argv.production ? 'index.html' : 'index.dev.html'
   })
 ];
 
-module.exports = {
+module.exports = (_env, argv) => ({
   entry: {
     main: './src/main.js'
   },
+  mode: argv.production ? 'production' : 'development',
   output: {
     library: libraryName,
     libraryTarget: 'umd',
-    filename: `${libraryName}.js`,
+    filename: argv.production ? '[name].[chunkhash].min.js' : '[name].js',
     auxiliaryComment: 'Test Comment'
   },
-  mode: 'development',
-  devtool: 'eval-source-map',
+  devtool: argv.production ? false : 'eval-source-map',
   module: {
     rules: [
       {
@@ -48,10 +48,10 @@ module.exports = {
       }
     ]
   },
-  plugins,
+  plugins: plugins(argv),
   devServer: {
     contentBase: 'dist',
     watchContentBase: true,
     port: 9000
   }
-};
+});

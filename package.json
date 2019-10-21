@@ -9,7 +9,7 @@
     "coverage": "jest --config=jest.config.prod.js --detectOpenHandles --coverage --coverageReporters=text-lcov && cat ./coverage/lcov.info",
     "coveralls": "yarn coverage | coveralls",
     "dev": "webpack --development --hot",
-    "dev:server": "webpack-dev-server --color",
+    "dev:server": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --color",
     "lint": "yarn check:versions && eslint '**/*.js' --fix",
     "prettier": "./node_modules/prettier/bin-prettier.js --write",
     "start": "yarn install && cp git-hooks/* .git/hooks/ && chmod -R +x .git/hooks",
